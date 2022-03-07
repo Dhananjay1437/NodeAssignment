@@ -1,0 +1,52 @@
+{
+  "plugins": ["sonarjs"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:node/recommended",
+    "plugin:sonarjs/recommended",
+    "airbnb", 
+    "prettier"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2018
+  },
+  "rules": {
+    "no-console": "warn",
+    "eqeqeq": ["error", "always", { "null": "ignore" }],
+    "no-const-assign": "error",
+    "no-delete-var": "error",
+    "no-unused-vars": "error",
+    "no-var": "error",
+    "no-multiple-empty-lines": [
+      "error",
+      { "max": 2, "maxBOF": 0, "maxEOF": 0 }
+    ],
+    "prefer-const": [
+      "error",
+      {
+        "destructuring": "any",
+        "ignoreReadBeforeAssign": false
+      }
+    ],
+    "no-self-assign": "warn",
+    "no-self-compare": "warn",
+    "complexity": ["error", { "max": 15 }],
+    "indent": ["error", 2, { "SwitchCase": 1 }],
+    "no-dupe-keys": "error",
+    "no-invalid-regexp": "error",
+    "no-undef": "error",
+    "no-return-assign": "error",
+    "no-redeclare": "error",
+    "no-empty": "error",
+    "no-await-in-loop": "error",
+    "node/exports-style": ["error", "module.exports"],
+    "node/file-extension-in-import": ["error", "always"],
+    "node/prefer-global/buffer": ["error", "always"],
+    "node/prefer-global/console": ["error", "always"],
+    "node/prefer-global/process": ["error", "always"],
+    "node/prefer-global/url-search-params": ["error", "always"],
+    "node/prefer-global/url": ["error", "always"],
+    "node/prefer-promises/dns": "error",
+    "node/prefer-promises/fs": "error"
+  }
+}
